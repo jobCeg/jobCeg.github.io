@@ -3,10 +3,10 @@
 .idea
 
 # Modules
-/node_modules
+#/node_modules
 
 # Compilec
-/build
+#/build
 
 # General
 .DS_Store
