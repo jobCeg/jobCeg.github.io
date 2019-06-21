@@ -1,0 +1,17 @@
+{
+  "name": "jobCeg.github.io",
+  "homepage": "https://jobceg.github.io/",
+  "version": "1.0.0",
+  "description": "porftolio & pet projects",
+  "main": "src/index.js",
+  "repository": "git@github.com:jobCeg/jobCeg.github.io.git",
+  "author": "Job Celaya <job_722@hotmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
