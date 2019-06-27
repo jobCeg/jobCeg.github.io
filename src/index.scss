@@ -1,0 +1,65 @@
+@import "./core";
+$background-primary: #0e0b39;
+
+html,
+body {
+  height: 100%;
+  background: $background-primary;
+}
+
+$social-width: 70px;
+.social {
+  &__list {
+    color: white;
+    display: flex;
+    bottom: 0;
+    padding-bottom: 15px;
+    position: absolute;
+    width: $social-width;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    z-index: 2;
+  }
+  &__item {
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+  }
+}
+
+.lines-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  padding: 85px 0;
+  .scene {
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    height: calc(100% - 170px);
+  }
+  .title {
+    font-size: 9vw;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 35px;
+    pointer-events: none;
+    letter-spacing: 5px;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 0 0.75em;
+    margin: 0;
+    text-indent: 0.5em;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 15px;
+  }
+}

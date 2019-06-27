@@ -5,8 +5,11 @@
 # Modules
 /node_modules
 
-# Compilec
+# Compiled
 /build
+
+# Coverage
+/coverage
 
 # General
 .DS_Store
