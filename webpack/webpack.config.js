@@ -117,7 +117,7 @@ module.exports = function(env, argv) {
         {
           from: `${__dirname}/../public`,
           to: `${__dirname}/../build`,
-          ignore: ["index.html"]
+          ignore: ["index.html", 'resources']
         }
       ]),
       isEnvProduction &&
