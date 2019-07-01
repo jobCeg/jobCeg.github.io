@@ -6,6 +6,9 @@ body {
   height: 100%;
   background: $background-primary;
 }
+canvas{
+  padding-left: 80px;
+}
 
 $social-width: 70px;
 .social {
@@ -21,11 +24,21 @@ $social-width: 70px;
     height: 100vh;
     left: 0;
     z-index: 2;
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      z-index: -1;
+      left: $social-width/2;
+    }
   }
   &__item {
     text-align: center;
     padding: 15px;
     cursor: pointer;
+    background-color: $background-primary;
   }
 }
 
@@ -44,10 +57,11 @@ $social-width: 70px;
     height: calc(100% - 170px);
   }
   .title {
-    font-size: 9vw;
+    font-size: 8vw;
     font-weight: 500;
     color: #ffffff;
     text-align: center;
+    padding: 0 70px;
     margin: 0 0 35px;
     pointer-events: none;
     letter-spacing: 5px;
@@ -55,7 +69,7 @@ $social-width: 70px;
   .subtitle {
     font-size: 1.5rem;
     color: #ffffff;
-    padding: 0 0.75em;
+    padding: 0 70px;
     margin: 0;
     text-indent: 0.5em;
     text-align: center;

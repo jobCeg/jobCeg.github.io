@@ -90,10 +90,10 @@ module.exports = function(env, argv) {
       ]
     },
     optimization: {
-      runtimeChunk: false,
-      // splitChunks: {
-      //   chunks: 'all',
-      // },
+      runtimeChunk: true,
+      splitChunks: {
+        chunks: 'all',
+      },
       minimizer: isEnvProduction
         ? [
             new UglifyJsPlugin({
@@ -117,7 +117,6 @@ module.exports = function(env, argv) {
         {
           from: `${__dirname}/../public`,
           to: `${__dirname}/../build`,
-          ignore: ["index.html", 'resources']
         }
       ]),
       isEnvProduction &&
@@ -129,7 +128,7 @@ module.exports = function(env, argv) {
           : "[name].css"
       }),
       new HtmlWebpackPlugin({
-        template: `${__dirname}/../public/index.html`,
+        template: `${__dirname}/../src/index.html`,
         filename: "index.html",
         inject: "body",
         minify: isEnvProduction
